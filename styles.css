@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Fira Sans', sans-serif;
+  color: #3b3b3b;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.btn {
+  height: fit-content;
+  width: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#dropdown {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.dropdown {
+  display: flex;
+  max-width: 960px;
+  position: relative;
+}
+
+.radi-img {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  overflow: hidden;
+  height: 450px;
+  transition: height 1s;
+}
+
+.dropdown-content {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  transition: height 1s;
+}
+
+.dropdown-content.hidden {
+  height: 150px;
+}
+
+.dropdown-content.hidden .btn svg {
+  transform: rotate(0);
+}
+
+.radi-img.hidden {
+  height: 130px;
+}
+
+
+.dropdown-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  background-color: #ddeadf;
+  width: 100%;
+  padding-left: 200px;
+}
+
+.drop-header h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.drop-header h1 span {
+  color: #cd2e31;
+  font-size: 67px;
+  
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  background-color: #3b3b3b;
+  color: white;
+  align-self: flex-end;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+
+svg {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  transition: transform 1s;
+  transform: rotate(90deg);
+
+}
+
+.dropdown-bottom {
+  padding-top: 20px;
+  padding-left: 200px;
+}
+
+.dropdown-bottom h2 {
+  margin-bottom: 10px;
+}
+
+.dropdown-bottom span {
+  font-weight: 700;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:700px) {
+  .dropdown-top {
+    flex-direction: column;
+  }
+  .drop-header h1 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  .drop-header h1 span {
+    font-size: 50px;
+  }
+  .header-btn {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width:660px) {
+  .radi-img {
+    display: none;
+  }
+  .dropdown-top {
+    padding: 0 20px;
+  }
+  .dropdown-bottom {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .dropdown-bottom h2 {
+    font-size: 1rem;
+  }
+}
